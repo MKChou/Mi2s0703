@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星際閃避 — Star Dodge</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="stars-bg" aria-hidden="true"></div>
+
+  <main class="game-wrapper">
+    <header class="hud">
+      <div class="hud-item">
+        <span class="hud-label">分數</span>
+        <span id="score" class="hud-value">0</span>
+      </div>
+      <h1 class="title">星際閃避</h1>
+      <div class="hud-item hud-right">
+        <span class="hud-label">最高</span>
+        <span id="highScore" class="hud-value">0</span>
+      </div>
+    </header>
+
+    <div class="canvas-container">
+      <canvas id="gameCanvas" width="480" height="640" aria-label="遊戲畫面"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="overlay-content">
+          <h2 id="overlayTitle">準備起飛</h2>
+          <p id="overlayText">左右移動飛船，收集星星、躲避隕石！</p>
+          <button id="startBtn" class="btn-primary">開始遊戲</button>
+          <p class="controls-hint">
+            <kbd>←</kbd> <kbd>→</kbd> 或 <kbd>A</kbd> <kbd>D</kbd> 移動<br>
+            手機：左右滑動螢幕
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>難度會隨時間提升</span>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
